@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwopqq.booting.system.mapper.PersonMapper">
+  <resultMap id="BaseResultMap" type="com.itwopqq.booting.system.model.Person">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="BIGINT" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+  </resultMap>
+
+  <insert id="insert"  parameterType="com.itwopqq.booting.system.model.Person" useGeneratedKeys="true" keyProperty="id">
+    INSERT INTO person(name, age) value (#{name}, #{age})
+  </insert>
+</mapper>
